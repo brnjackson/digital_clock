@@ -1,14 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: black;
+    background-image: linear-gradient(to bottom right, rgb(0, 204, 255), rgb(255, 0, 157))
 }
 
 .container {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 9rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12rem;
+    font-weight: 100;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,6 +17,6 @@ body {
 }
 
 span {
-    margin: .5rem;
+    margin: .8rem;
 }
 
