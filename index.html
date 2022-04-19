@@ -12,12 +12,35 @@
 </head>
 <body>
     <div class="container">
-        <span id="hours">00</span>
-        <span>:</span>
-        <span id="minutes">00</span>
-        <span>:</span>
-        <span id="seconds">00</span>
-        <span id="session">AM</span>
+        <div class="time">
+            <span id="hours">00</span>
+            <span>:</span>
+            <span id="minutes">00</span>
+            <span>:</span>
+            <span id="seconds">00</span>
+            <span id="session">AM</span>
+        </div>
+        <div class="scheduler">
+            <label>What's on the schedule today?</label>
+            <input type="text" name="" id="activity" class="inputs">
+            <label>At what time?</label>
+            <input type="number" id="timehrs" class="inputs timeinput" required>:
+            <input type="number" id="timemins" class="inputs timeinput" required>
+            <select name="session" id="dropdown_session" class="inputs timeinput">
+                <option value="am">AM</option>
+                <option value="pm">PM</option>
+              </select><br />
+            <input type="submit" value="Add to your schedule" id="add_schedule" class="btn" onclick="addToSchedule()">
+            <input type="submit" value="Clear schedule" id="clear_schedule" class="btn">
+        </div>
+        <div id="schedule">
+            <div id="schedule_items" class="list">
+            </div>
+            <div id="schedule_time" class="list">
+            </div>
+            <div id="schedule_countdown" class="list">
+            </div>
+        </div>
     </div>
     <script src="app.js"></script>
 </body>

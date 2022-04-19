@@ -6,17 +6,104 @@ body {
 
 .container {
     font-family: 'Roboto', sans-serif;
-    font-size: 12rem;
     font-weight: 100;
     text-align: center;
     color: rgb(255, 255, 255);
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 100vh;
+    flex-direction: column;
+}
+
+.time {
+    font-size: 8rem;
+    padding: 5rem;
 }
 
 span {
-    margin: .8rem;
+    margin: .5rem;
 }
 
+label {
+    font-size: 1.5rem;
+    padding: 0;
+    margin: 0;
+}
+
+input, select {
+    margin: 1rem;
+    font-family: 'Roboto';
+    font-size: 1.5rem;
+    padding: .5rem;
+}
+
+#dropdown_session {
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+}
+
+#dropdown_session:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.39);
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+.inputs{
+    background-color: rgba(255, 255, 255, 0.137);
+    border: none;
+    color: white;
+}
+
+#scheduler, .btn {
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 1rem;
+    color: white;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: rgb(0, 204, 255);
+
+}
+
+
+.timeinput {
+    width: 3rem;
+}
+
+.timeInput, .scheduleItem, .timeCountdown {
+    background-color: rgba(255, 255, 255, 0.137);
+    margin-top: 1rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+#schedule {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list {
+    margin: .5rem;
+    width: 23rem;
+}
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  }
