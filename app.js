@@ -35,7 +35,6 @@ displayTime = () => {
   document.getElementById("seconds").innerHTML = seconds;
 };
 
-
 // timer IDK
 setInterval(displayTime, 10);
 
@@ -104,11 +103,12 @@ timeCountdown = () => {
       if (time_i[0] < 12) {
       time_i[0] += 12;
     }
-
-   
   
   if (time_i.includes("am")) {
-    time_i = time_i.replace("am", "").split(":").map((item) => Number(item))
+    time_i = time_i
+    .replace("am", "")
+    .split(":")
+    .map((item) => Number(item))
   }
  console.log(time_i)
 
@@ -138,7 +138,6 @@ timeCountdown = () => {
   timeCountdown.innerHTML = "in " + durationHrs + " hours and " + durationMins + " minutes"
 });
 }
-
 
 document.querySelector("#clear_schedule").addEventListener("click", () => {
     document.querySelector("#schedule_items").textContent = "";
