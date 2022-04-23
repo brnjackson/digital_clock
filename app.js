@@ -102,14 +102,20 @@ timeCountdown = () => {
     
       if (time_i[0] < 12) {
       time_i[0] += 12;
-    }
+    }  
   
+
   if (time_i.includes("am")) {
     time_i = time_i
     .replace("am", "")
     .split(":")
     .map((item) => Number(item))
+
+    if(time_i[0] === 12) {
+      time_i[0] = 0
+    } 
   }
+
  console.log(time_i)
 
   let currTime = new Date();
@@ -133,7 +139,9 @@ timeCountdown = () => {
     durationHrs = durationHrs - 1;
     durationMins = 60 - currMins + inputMins;
   }
-  console.log(durationMins)
+  if(durationHrs < 0) {
+    durationHrs += 24
+  }
 
   timeCountdown.innerHTML = "in " + durationHrs + " hours and " + durationMins + " minutes"
 });
